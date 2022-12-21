@@ -47,7 +47,7 @@ Scrivere una funzione calculator che preo come argomento un'operazione
 e due numeri, ritorni alla fine il numero risultato dall'operazione scelta.
 */
 
-// Inserimento dati mediante argomenti della funzione
+// Inserimento dati singolarmente mediante argomenti della funzione
 
 function calculator(operation, n1, n2) {
   if (operation === "addizione") {
@@ -70,6 +70,32 @@ calculator("sottrazione", 10, 5);
 calculator("moltiplicazione", 10, 5);
 calculator("divisione", 10, 5);
 */
+
+// Inserimento dati in un'array mediante argomenti della funzione
+
+function calculator2(operation, [n1, n2]) {
+  if (operation === "addizione") {
+    console.log("Il risultato dell'addizione è " + (n1 + n2));
+    return n1 + n2;
+  } else if (operation === "sottrazione") {
+    console.log("Il risultato della sottrazione è " + (n1 - n2));
+    return n1 - n2;
+  } else if (operation === "moltiplicazione") {
+    console.log("Il risultato della moltiplicazione è " + n1 * n2);
+    return n1 * n2;
+  } else if (operation === "divisione") {
+    console.log("Il risultato della divisione è " + n1 / n2);
+    return n1 / n2;
+  }
+}
+
+/*
+calculator2("addizione", [10, 5]);
+calculator2("sottrazione", [10, 5]);
+calculator2("moltiplicazione", [10, 5]);
+calculator2("divisione", [10, 5]);
+*/
+
 
 // Inserimento dei dati attraverso Prompt
 
