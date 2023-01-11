@@ -11,7 +11,6 @@ con la X - Elimini la card stessa
 */
 
 function changeColorText() {
-  //   document.body.style.color = "red";
   titleEl.style.color = "red";
   descriptionEl.style.color = "red";
 }
