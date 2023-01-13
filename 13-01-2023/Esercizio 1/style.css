@@ -28,6 +28,7 @@ h1 {
   height: 300px;
   border-radius: 20px;
   box-shadow: 6px 5px 4px rgba(18, 86, 111, 1);
+  object-fit: cover;
 }
 
 .shape {
