@@ -12,20 +12,20 @@ Modern Bronze Chair
 New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, 
 power UHD Graphics, OS 10 Home, OS Office A & J 2016
 */
-/*
+
 //metodo fetch per collegare l'API
 fetch("https://api.escuelajs.co/api/v1/products")
   .then((response) => response.json())
-  .then((data) => dataManipulation(data));
+  .then((data) => dataManipulation1(data));
 
 //funzione per manipolare l'array dentro l'API che mi restituisce in
 //console il nome e la descrizione del prodotto
-const dataManipulation = (data) => {
+const dataManipulation1 = (data) => {
   data.forEach((item) => {
     console.log(item.title, item.description);
   });
 };
-*/
+
 
 /*Avanzato
 Crea delle card il più verosimili possibile ad un vero e-commerce e 
