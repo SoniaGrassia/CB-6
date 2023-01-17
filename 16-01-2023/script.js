@@ -70,8 +70,8 @@ const dataManipulation = (data) => {
 
     //l'immagine del prodotto ma non funziona
     const imageEl = document.createElement("img");
+    imageEl.setAttribute = ("src", item.category.image);
     imageEl.className = "image";
-    imageEl.setAttribute = ("src", item.images);
 
     //l'id
     const idEl = document.createElement("p");
