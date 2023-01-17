@@ -34,7 +34,7 @@ messaggio) e la gestione degli errori
 */
 const bodyEl = document.querySelector("body");
 const productEl = document.createElement("section");
-//creo il button per caricare i file
+//creo il button
 const loaderEl = document.createElement("button");
 loaderEl.className = "btn-loader";
 loaderEl.textContent = "Carica i prodotti";
