@@ -36,11 +36,11 @@ cartImg.setAttribute("src", "./1124199.png");
 const tendinaEl = document.createElement("div");
 tendinaEl.className = "tendina";
 
+const cart = [];
+
 cartEl.addEventListener("click", () => {
   tendinaEl.classList.toggle("show");
 });
-
-const cart = [];
 
 cartEl.appendChild(cartImg);
 headerEl.append(loaderEl, cartEl, tendinaEl);
@@ -100,9 +100,7 @@ const dataManipulation = (data) => {
     btnBuy.textContent = "Aggiungi al carrello";
 
     btnBuy.addEventListener("click", () => {
-      cart.push(item);
-      cartPopulation();
-      console.log(cart);
+      cartPopulator(item);
       alert("Hai aggiunto il prodotto al carrello");
     });
 
@@ -112,20 +110,45 @@ const dataManipulation = (data) => {
   });
 };
 
-const cartPopulation = () => {
+const cartCreation = () => {
   tendinaEl.innerHTML = "";
-  cart.forEach((item) => {
-    const buyEl = document.createElement("p");
+  cart.forEach((item, index) => {
+    const buyEl = document.createElement("div");
+    buyEl.className = "cartRow";
     buyEl.textContent = item.title;
 
     const removeEl = document.createElement("button");
     removeEl.textContent = "X";
 
-    // removeEl.addEventListener("click", () => {
-    //   cart.remove()
-    // });
+    removeEl.addEventListener("click", () => {
+      buyEl.remove();
+      cart.splice(index, 1);
+    });
 
     buyEl.appendChild(removeEl);
     tendinaEl.appendChild(buyEl);
   });
+};
+
+const cartPopulator = (item) => {
+  const newObj = {
+    id: item.id,
+    title: item.title,
+    price: item.price,
+    qty: 1,
+  };
+
+  const search = cart.filter((element) => {
+    if (element.id === newObj.id) {
+      element.qty++;
+      return element;
+    }
+  });
+
+  if (search.length === 0) {
+    cart.push(newObj);
+  }
+
+  console.log(cart);
+  cartCreation();
 };
