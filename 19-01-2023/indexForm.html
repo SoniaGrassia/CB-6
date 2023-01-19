@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esercizi 18-01-2023</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./scriptForm.js" type="module"></script>
+  </head>
+  <body class="form-body">
+    <a href="./index.html">Home</a>
+    <div id="formProduct">
+      <form class="formProduct">
+        <h2>Carica un nuovo Prodotto</h2>
+        <div>
+          <label for="title">Nome: </label>
+          <input
+            name="title"
+            type="text"
+            id="title"
+            placeholder="Inserisci il nome del prodotto"
+            required
+          />
+        </div>
+        <div>
+          <label for="price">Prezzo: </label>
+          <input
+            name="price"
+            type="number"
+            id="price"
+            placeholder="Prezzo"
+            required
+          />
+        </div>
+        <div>
+          <label for="category">Inserisci una categoria: </label>
+          <input
+            name="category"
+            type="number"
+            id="category"
+            placeholder="Categoria"
+            required
+          />
+        </div>
+        <div>
+          <label for="image">Carica un'mmagine: </label>
+          <input
+            name="image"
+            type="text"
+            id="image"
+            placeholder="Aggiungi un'immagine"
+            required
+          />
+        </div>
+        <div>
+          <label for="description">Descrivi il tuo prodotto: </label>
+          <textarea
+            name="description"
+            id="description"
+            placeholder="Aggiungi una descrizione"
+            rows="5"
+            cols="40"
+            required
+          ></textarea>
+        </div>
+        <input class="button" type="submit" value="INVIA" />
+      </form>
+    </div>
+
+    <div id="formCategories">
+      <form class="formCategories">
+        <h2>Aggiungi una nuova categoria</h2>
+        <div>
+          <label for="categoryName">Nome: </label>
+          <input
+            name="name"
+            type="text"
+            id="nameCategory"
+            placeholder="Nome della nuova categoria"
+            required
+          />
+        </div>
+        <div>
+          <label for="imageCategory">Carica un'immagine: </label>
+          <input
+            name="imageCategory"
+            type="text"
+            id="imageCategory"
+            placeholder="Aggiungi un'immagine"
+            required
+          />
+        </div>
+        <input class="button" type="submit" value="INVIA" />
+      </form>
+    </div>
+  </body>
+</html>
