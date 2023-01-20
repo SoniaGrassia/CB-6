@@ -44,18 +44,11 @@ loaderEl.addEventListener("click", () => {
   fetch("https://api.escuelajs.co/api/v1/products")
     .then((response) => response.json())
     .then((data) => {
-      /*Il filter mi da Errore:  TypeError: data.forEach is not a function
-    at dataManipulation (script.js:63:8)
-    at script.js:49:9
-    at Array.forEach (<anonymous>)
-    at script.js:48:15 */
-      // const newData = data.filter((item) => item.category.id === 86);
-      // newData.forEach((element) => {
-      //   dataManipulation(element);
-      //   console.log(element);
-      // });
-      dataManipulation(data);
+      const newData = data.filter((item) => item.category.id === 1);
+
+      dataManipulation(newData);
     })
+
     .catch((e) => {
       loaderEl.textContent = "Errore nel caricamento della pagina";
       console.log("Errore: ", e);
