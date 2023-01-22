@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./scriptForm.js" type="module"></script>
+  </head>
+  <body class="form-body">
+    <a href="./index.html">Home</a>
+    <form class="new-product">
+      <h2>Carica un nuovo Prodotto</h2>
+      <div>
+        <label for="name">Nome prodotto: </label>
+        <input
+          type="text"
+          name="name"
+          class="name"
+          placeholder="Inserisci il nome del prodotto"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="price">Inserisci il prezzo: </label>
+        <input
+          type="number"
+          name="price"
+          class="price"
+          placeholder="Prezzo"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="category">Inserisci una categoria: </label>
+        <input
+          type="number"
+          name="category"
+          class="category"
+          placeholder="Categoria"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="image">Carica un'immagine: </label>
+        <input
+          type="text"
+          class="image"
+          name="image"
+          placeholder="Aggiungi una foto"
+        />
+      </div>
+
+      <div>
+        <label for="description">Descrivi il tuo prodotto: </label>
+        <textarea
+          name="description"
+          class="description"
+          cols="40"
+          rows="5"
+          placeholder="Inserisci una breve descrizione del tuo prodotto"
+          required
+        ></textarea>
+      </div>
+      <input type="submit" class="button" value="INVIA" />
+    </form>
+
+    <form class="new-category">
+      <h2>Aggiungi una nuova categoria</h2>
+      <div>
+        <label for="categoryName">Nome: </label>
+        <input
+          name="name"
+          type="text"
+          class="nameCategory"
+          placeholder="Nome della nuova categoria"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="imageCategory">Carica un'immagine: </label>
+        <input
+          name="imageCategory"
+          type="text"
+          class="imageCategory"
+          placeholder="Aggiungi un'immagine"
+          required
+        />
+      </div>
+      <input class="button" type="submit" value="INVIA" />
+    </form>
+
+    <form class="edit-product">
+      <h2>Modifica un prodotto</h2>
+      <div>
+        <label for="id">ID prodotto: </label>
+        <input
+          name="id"
+          type="text"
+          class="idProduct"
+          placeholder="ID"
+          required
+        />
+      </div>
+      <div>
+        <label for="edit-title">Nome: </label>
+        <input
+          name="edit-title"
+          type="text"
+          class="edit-title"
+          placeholder="Nuovo nome prodotto"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="edit-price">Prezzo: </label>
+        <input
+          type="number"
+          name="edit-price"
+          class="edit-price"
+          placeholder="Nuovo prezzo"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="edit-category">Categoria: </label>
+        <input
+          type="number"
+          name="edit-category"
+          class="edit-category"
+          placeholder="Nuova categoria"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="edit-image">Carica un'immagine: </label>
+        <input
+          type="text"
+          class="edit-image"
+          name="edit-image"
+          placeholder="Nuova foto"
+        />
+      </div>
+
+      <div>
+        <label for="edit-description">Descrivi il tuo prodotto: </label>
+        <textarea
+          name="edit-description"
+          class="edit-description"
+          cols="40"
+          rows="5"
+          placeholder="Inserisci una breve descrizione del tuo prodotto"
+          required
+        ></textarea>
+      </div>
+      <input type="submit" class="button" value="INVIA" />
+    </form>
+
+    <form class="delete-product">
+      <h2>Elimina un prodotto</h2>
+      <div>
+        <label for="delete-id">ID prodotto:</label>
+        <input
+          name="delete-id"
+          type="text"
+          class="delete-id"
+          placeholder="ID del prodotto da eliminare"
+          required
+        />
+      </div>
+      <input type="submit" class="button" value="INVIA" />
+    </form>
+  </body>
+</html>

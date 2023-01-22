@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #252525;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 20px 20px 20px 0;
+  width: 100%;
+  height: 90px;
+  justify-content: space-between;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.896);
+  position: relative;
+  margin-bottom: 2px;
+}
+
+header .logo {
+  width: 10vh;
+  height: 80px;
+  padding: 5px;
+}
+
+a {
+  padding: 5px;
+  color: #ee4623;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+header .carrello {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+header .carrello img {
+  width: 35px;
+  height: 35px;
+}
+
+header .tendina {
+  width: 300px;
+  height: 400px;
+  position: absolute;
+  right: 30px;
+  top: 65px;
+  background-color: #252525;
+  box-shadow: 0px 10px 18px #ee4623;
+  border-radius: 5px;
+  /* z-index: -10; */
+  z-index: 2;
+  opacity: 0;
+  transition: all 0.35s;
+  padding: 20px;
+}
+
+header .tendina .cartRow {
+  color: white;
+  padding: 10px;
+  border: 1px solid #ee4623;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-size: small;
+}
+
+.tendina button {
+  width: 20px;
+  height: 20px;
+  padding: 4px 0;
+  background-color: #ee4623;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.show {
+  opacity: 1 !important;
+}
+
+section .hero {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+section .hero img {
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.35s;
+}
+
+section .dots {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+section .dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: peachpuff;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #ee4623 !important;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.loader button,
+.btn-buy {
+  width: 20vh;
+  height: 30px;
+  padding: 4px 8px;
+  margin: 8px 0;
+  background-color: #ee4623;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.loader button:hover,
+.btn-buy:hover,
+.delete-btn:hover,
+.link-form:hover,
+.button:hover {
+  font-weight: bold;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+div .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 300px;
+  height: 400px;
+  border: 1px solid #ee4623;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+div .card .image {
+  height: 200px;
+  width: 200px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+div .card .name,
+.id,
+.description,
+.price {
+  color: white;
+}
+
+/* FORM */
+.form-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0;
+  gap: 35px;
+}
+
+form {
+  box-shadow: 0px 0px 24px 10px #ee4623;
+  border-radius: 10px;
+  width: 450px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+h2,
+label {
+  color: white;
+}
+
+form input {
+  border: none;
+  width: 25vh;
+  height: 30px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+form .button {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ee4623;
+}
+
+.new-category,
+.delete-product {
+  height: 250px;
+}
