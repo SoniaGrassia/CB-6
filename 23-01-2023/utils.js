@@ -8,7 +8,7 @@ const qS = (element) => document.querySelector(element);
 
 const btnEl = cE("button");
 
-function numRandom() {
+export function numRandom() {
   const num = Math.round(Math.random() * 100);
   return num;
 }

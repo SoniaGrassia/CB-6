@@ -1,4 +1,4 @@
-import { cE, qS, cardCreator } from "./utils.js";
+import { cE, qS, cardCreator, numRandom } from "./utils.js";
 import { GET } from "./fetchMethods.js";
 
 export const bodyEl = qS("body");
@@ -8,4 +8,6 @@ cardEl.className = "card";
 bodyEl.appendChild(cardEl);
 
 //per generare l'aforisma con id 1
-GET("quotes/1").then((data) => bodyEl.appendChild(cardCreator(data)));
+GET("quotes/" + numRandom()).then((data) =>
+  bodyEl.appendChild(cardCreator(data))
+);
