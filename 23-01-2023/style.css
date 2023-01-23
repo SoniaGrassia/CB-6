@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Signika+Negative:wght@300&family=Sora:wght@100;300&display=swap");
+
+body {
+  background-color: #252525;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-family: "Sora", sans-serif;
+}
+
+h1 {
+  background: #b8e1fc;
+  background: radial-gradient(
+    circle farthest-corner at center center,
+    #b8e1fc 0%,
+    #279dcf 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card {
+  background-color: #f0f8ff;
+  width: 50vh;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 25px 15px rgba(132, 204, 255, 0.5);
+}
+
+.btn {
+  width: 15vh;
+  height: 30px;
+  border-radius: 15px;
+  border: 1px solid #279dcf;
+  cursor: pointer;
+}
+
+.btn:hover {
+  font-weight: bold;
+  width: 17vh;
+}
