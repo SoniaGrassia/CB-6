@@ -89,12 +89,6 @@ searchEl.addEventListener("input", (e) => {
   );
 });
 
-GET("users?limit=30")
-  .then((data) => data.users.map((user) => bodyEl.appendChild(userCard(user))))
-  .then(() => {
-    const userEl = document.querySelectorAll(".card");
-
-    userEl.forEach((user) =>
-      user.addEventListener("click", () => console.log(post.id))
-    );
-  });
+GET("users?limit=30").then((data) =>
+  data.users.map((user) => bodyEl.appendChild(userCard(user)))
+);
