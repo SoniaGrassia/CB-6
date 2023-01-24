@@ -76,11 +76,13 @@ const userDelete = () => {
 
 searchEl.addEventListener("input", (e) => {
   userDelete();
+  //entro nel valore inserito tramite input
   searchInput = e.target.value;
   console.log(searchInput);
 
   GET("users?limit=30").then((data) =>
     data.users.map((user) => {
+      //filtro i pazienti in base al loro nome inserito nell'input
       if (user.firstName.toLowerCase().includes(searchInput.toLowerCase()))
         bodyEl.appendChild(userCard(user));
     })
