@@ -1,0 +1,48 @@
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+input {
+  width: 280px;
+  height: 20px;
+  cursor: text;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid lightslategray;
+  background-color: azure;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+  border: 1px solid lightslategray;
+  border-radius: 8px;
+}
+
+.description {
+  padding: 0 10px;
+  font-size: small;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-bottom: 7px;
+}
+
+.contact {
+  font-size: small;
+  padding: 0 10px;
+}
+
+p {
+  margin: 5px 0;
+}
