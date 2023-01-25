@@ -49,7 +49,8 @@ const barGenerator = (gender, num) => {
   return container;
 };
 
-//devo sistemare questa parte
+//devo sistemare questa parte per poter passare i parametri giusti alla funzione barGenerator
+//trasformare in oggetti con text: "female" o "male", num:"lunghezza dell'array di riferimento"
 let femaleGender = [];
 let maleGender = [];
 
