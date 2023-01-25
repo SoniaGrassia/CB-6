@@ -3,6 +3,7 @@ import mock from "./mock.json" assert { type: "json" };
 const cE = (element) => document.createElement(element);
 const bodyEl = document.body;
 
+//creo le card dei dipendanti
 const cardCreator = (mock) => {
   const { id, name, surname, photo } = mock;
   const cardEl = cE("div");
@@ -29,18 +30,39 @@ const cardCreator = (mock) => {
   return cardEl;
 };
 
-const barGenerator = () => {
-  const graphicBar = cE("div");
+//creo il grafico in base al sesso
+const barGenerator = (gender, num) => {
+  const container = cE("div");
+  const barEl = cE("div");
+  const genderEl = cE("h5");
   const statusEl = cE("div");
 
-  graphicBar.className = "graphic";
-  statusEl.className = "gender-status-bar";
+  container.className = "container";
+  barEl.className = "bar";
+  genderEl.textContent = gender;
+  statusEl.className = "gender-status";
+  statusEl.style.height = `${num * 10}px`;
 
-  graphicBar.append(statusEl);
-  bodyEl.appendChild(graphicBar);
-  return graphicBar;
-  //non completo, ci provo durante la serata
+  barEl.append(genderEl, statusEl);
+  container.appendChild(barEl);
+  bodyEl.appendChild(container);
+  return container;
 };
-barGenerator();
+
+//devo sistemare questa parte
+let femaleGender = [];
+let maleGender = [];
+
+barGenerator(femaleGender[0], femaleGender.length);
+//array con female e male
+const genderArr = mock.clients.map((client) => client.gender);
+
+const totGender = () => {
+  femaleGender = [genderArr.filter((gender) => gender === "female")];
+
+  maleGender = [genderArr.filter((gender) => gender === "male")];
+  console.log(femaleGender, maleGender);
+};
+totGender();
 
 mock.clients.map((client) => cardCreator(client));
