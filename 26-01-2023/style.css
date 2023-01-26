@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #252525;
+  color: crimson;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  gap: 30px;
+}
+
+div {
+  border: 1px solid crimson;
+  border-radius: 10px;
+  padding: 0 20px;
+  box-shadow: 0 0 25px crimson;
+}
+
+button {
+  text-align: center;
+  width: 80px;
+  height: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  border-bottom: #252525;
+  border-right: #252525;
+  background-color: crimson;
+  box-shadow: 0 0 25px crimson;
+}
+
+button:hover {
+  font-weight: bold;
+  font-size: medium;
+  width: 85px;
+}
