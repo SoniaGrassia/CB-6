@@ -34,3 +34,7 @@ button:hover {
   font-size: medium;
   width: 85px;
 }
+
+img {
+  width: 100%;
+}

@@ -13,7 +13,7 @@ const container = document.createElement("div");
 const countDownEl = document.createElement("h1");
 const btnStop = document.createElement("button");
 
-countDownEl.textContent = "Wait 5second...";
+countDownEl.textContent = "Wait...";
 btnStop.textContent = "STOP";
 
 bodyEl.append(container, btnStop);
@@ -32,9 +32,15 @@ const countDown = setTimeout(() => {
 const interval = setInterval(() => {
   countDownEl.textContent = timeout;
   if (timeout === 0) {
-    bodyEl.style.backgroundColor = "crimson";
+    bodyEl.style.backgroundColor = "white";
     container.remove();
     btnStop.remove();
+    clearInterval(interval);
+
+    const btnBoom = document.createElement("img");
+    btnBoom.src =
+      "https://c.tenor.com/bWOg2LpSEP4AAAAM/panda-making-a-mess.gif";
+    bodyEl.appendChild(btnBoom);
   } else {
     timeout--;
   }
