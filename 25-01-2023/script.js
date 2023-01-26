@@ -1,3 +1,5 @@
+//RISOLTO E FUNZIONA
+
 import mock from "./mock.json" assert { type: "json" };
 
 const cE = (element) => document.createElement(element);
@@ -33,6 +35,7 @@ const cardCreator = (mock) => {
 const container = cE("div");
 container.className = "container";
 bodyEl.appendChild(container);
+
 //creo il grafico in base al sesso
 const barGenerator = (gender, num) => {
   const barEl = cE("div");
@@ -50,23 +53,28 @@ const barGenerator = (gender, num) => {
   return container;
 };
 
-//devo sistemare questa parte per poter passare i parametri giusti alla funzione barGenerator
-//trasformare in oggetti con text: "female" o "male", num:"lunghezza dell'array di riferimento"
-let femaleGender = [];
-let maleGender = [];
+let femaleGender, maleGender;
 let prova = [];
-
 //array con female e male
 const genderArr = mock.clients.map((client) => client.gender);
 
 const totGender = () => {
-  femaleGender = genderArr.filter((gender) => gender === "female");
+  femaleGender = {
+    g: genderArr.filter((gender) => gender === "female"),
+    text: "female",
+  };
 
-  maleGender = genderArr.filter((gender) => gender === "male");
+  maleGender = {
+    g: genderArr.filter((gender) => gender === "male"),
+    text: "male",
+  };
 
   prova.push(femaleGender, maleGender);
 };
 totGender();
 
-prova.map((client) => barGenerator("gender", femaleGender.length));
+for (let i = 0; i < prova.length; i++) {
+  barGenerator(prova[i].text, prova[i].g.length);
+}
+
 mock.clients.map((client) => cardCreator(client));
