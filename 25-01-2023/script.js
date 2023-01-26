@@ -30,14 +30,15 @@ const cardCreator = (mock) => {
   return cardEl;
 };
 
+const container = cE("div");
+container.className = "container";
+bodyEl.appendChild(container);
 //creo il grafico in base al sesso
 const barGenerator = (gender, num) => {
-  const container = cE("div");
   const barEl = cE("div");
   const genderEl = cE("h5");
   const statusEl = cE("div");
 
-  container.className = "container";
   barEl.className = "bar";
   genderEl.textContent = gender;
   statusEl.className = "gender-status";
@@ -45,7 +46,7 @@ const barGenerator = (gender, num) => {
 
   barEl.append(genderEl, statusEl);
   container.appendChild(barEl);
-  bodyEl.appendChild(container);
+
   return container;
 };
 
@@ -53,17 +54,19 @@ const barGenerator = (gender, num) => {
 //trasformare in oggetti con text: "female" o "male", num:"lunghezza dell'array di riferimento"
 let femaleGender = [];
 let maleGender = [];
+let prova = [];
 
-barGenerator(femaleGender[0], femaleGender.length);
 //array con female e male
 const genderArr = mock.clients.map((client) => client.gender);
 
 const totGender = () => {
-  femaleGender = [genderArr.filter((gender) => gender === "female")];
+  femaleGender = genderArr.filter((gender) => gender === "female");
 
-  maleGender = [genderArr.filter((gender) => gender === "male")];
-  console.log(femaleGender, maleGender);
+  maleGender = genderArr.filter((gender) => gender === "male");
+
+  prova.push(femaleGender, maleGender);
 };
 totGender();
 
+prova.map((client) => barGenerator("gender", femaleGender.length));
 mock.clients.map((client) => cardCreator(client));
