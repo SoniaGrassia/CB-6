@@ -19,7 +19,7 @@ searchEl.addEventListener("submit", (e) => {
   searchInput = resultsSearch.value;
   console.log(searchInput);
 
-  GET2("search", "tv", searchInput).then((data) => {
+  GET2("search", "multi", searchInput).then((data) => {
     data.results.map((movie) => moviesResult.append(cardPopulator(movie)));
     console.log(data.results);
   });
