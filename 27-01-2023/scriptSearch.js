@@ -14,6 +14,7 @@ const cardDelete = () => {
 };
 
 searchEl.addEventListener("submit", (e) => {
+  cardDelete();
   e.preventDefault();
   searchInput = resultsSearch.value;
   console.log(searchInput);
