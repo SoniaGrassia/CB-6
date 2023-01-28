@@ -2,9 +2,9 @@ import { qS, qsA, cardPopulator } from "./utils.js";
 import { GET2 } from "./api.js";
 
 // NON COMPLETO
-const searchEl = qS(".search-input");
-const btnEl = qS(".btn-search");
-const resultsSearch = qS(".results");
+const searchEl = qS(".search-form");
+const resultsSearch = qS(".search-input");
+const moviesResult = qS(".results");
 let searchInput = "";
 
 const cardDelete = () => {
@@ -13,16 +13,22 @@ const cardDelete = () => {
   cardEl.forEach((movie) => movie.remove());
 };
 
-searchEl.addEventListener("input", (e) => {
-  cardDelete();
-  searchInput = e.target.value;
+searchEl.addEventListener("submit", (e) => {
+  e.preventDefault();
+  searchInput = resultsSearch.value;
+  console.log(searchInput);
 
-  btnEl.addEventListener("click", (e) => {
-    e.preventDefault();
-    console.log(searchInput);
-    GET2("search", "tv", searchInput).then((data) => {
-      data.results.map((movie) => resultsSearch.append(cardPopulator(movie)));
-      console.log(data.results);
-    });
+  GET2("search", "tv", searchInput).then((data) => {
+    data.results.map((movie) => moviesResult.append(cardPopulator(movie)));
+    console.log(data.results);
   });
 });
+
+//   btnEl.addEventListener("click", (e) => {
+//     console.log(searchInput);
+//     GET2("search", "tv", searchInput).then((data) => {
+//       data.results.map((movie) => resultsSearch.append(cardPopulator(movie)));
+//       console.log(data.results);
+//     });
+//   });
+// });
