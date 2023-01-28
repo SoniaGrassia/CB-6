@@ -10,29 +10,38 @@ body {
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   overflow: hidden;
   background-color: #333;
-  /* position: fixed; */
+  position: fixed;
   top: 0;
   border: 1px solid #e92525;
   border-radius: 0 0 5px 5px;
   height: 50px;
   width: 100%;
+  padding: 0 10px;
   color: #e92525;
   font-size: large;
+  top: 0;
+  left: 0;
 }
 
 a {
   text-decoration: none;
   color: #e92525;
   cursor: pointer;
+  padding-right: 35px;
 }
 
-.movies {
+a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.movies,
+.search-form {
   text-align: center;
-  gap: 20px;
-  margin: 0 10px;
+  margin: 70px 10px;
 }
 
 .popular,
@@ -46,6 +55,7 @@ a {
   width: 140px;
   height: 225px;
   border-radius: 12px;
+  object-fit: cover;
 }
 
 *::-webkit-scrollbar {
@@ -61,4 +71,18 @@ a {
   background-color: #e92525;
   border-radius: 8px;
   border: 2px ridge #252525;
+}
+
+/* SEARCH PAGE */
+.search-input,
+.btn-search {
+  height: 20px;
+  border-radius: 10px;
+  border: none;
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
