@@ -26,6 +26,11 @@ nav {
   left: 0;
 }
 
+.logo {
+  width: 100px;
+  padding-top: 5px;
+}
+
 a {
   text-decoration: none;
   color: #e92525;
@@ -44,17 +49,25 @@ a:hover {
   margin: 70px 10px;
 }
 
-.popular,
-.top-rated {
+.popular-movies,
+.top-rated-movies,
+.popular-tv,
+.top-rated-tv {
   display: flex;
   overflow-x: auto;
   gap: 10px;
+}
+
+.movie {
+  margin-bottom: 6px;
 }
 
 .movie img {
   width: 140px;
   height: 225px;
   border-radius: 12px;
+  border: 1px solid #e92525;
+  box-shadow: 0 0 7px #e92525;
   object-fit: cover;
 }
 
@@ -70,7 +83,7 @@ a:hover {
 *::-webkit-scrollbar-thumb {
   background-color: #e92525;
   border-radius: 8px;
-  border: 2px ridge #252525;
+  border: 1px ridge #252525;
 }
 
 /* SEARCH PAGE */
@@ -85,4 +98,5 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  margin: 0 10px;
 }
