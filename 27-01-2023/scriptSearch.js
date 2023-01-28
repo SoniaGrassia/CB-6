@@ -24,12 +24,3 @@ searchEl.addEventListener("submit", (e) => {
     console.log(data.results);
   });
 });
-
-//   btnEl.addEventListener("click", (e) => {
-//     console.log(searchInput);
-//     GET2("search", "tv", searchInput).then((data) => {
-//       data.results.map((movie) => resultsSearch.append(cardPopulator(movie)));
-//       console.log(data.results);
-//     });
-//   });
-// });
