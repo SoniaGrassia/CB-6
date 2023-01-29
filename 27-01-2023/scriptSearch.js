@@ -1,26 +1,40 @@
-import { qS, qsA, cardPopulator } from "./utils.js";
-import { GET2 } from "./api.js";
+import { qS, cE, cardPopulator, cardDelete } from "./utils.js";
+import { GET2, GET3 } from "./api.js";
 
-// NON COMPLETO
 const searchEl = qS(".search-form");
 const resultsSearch = qS(".search-input");
+const titleEl = qS(".title");
 const moviesResult = qS(".results");
+
+const serieTvTitle = cE("h2");
+const serieTvEl = cE("section");
+const filmTitle = cE("h2");
+const filmEl = cE("setion");
+
+serieTvTitle.textContent = "Serie tv";
+serieTvEl.className = "tv";
+filmTitle.textContent = "Film";
+filmEl.className = "film";
+
 let searchInput = "";
 
-const cardDelete = () => {
-  const cardEl = qsA(".movie");
-
-  cardEl.forEach((movie) => movie.remove());
-};
+GET2("trending", "all").then((data) => {
+  data.results.map((movie) => moviesResult.append(cardPopulator(movie)));
+});
 
 searchEl.addEventListener("submit", (e) => {
   cardDelete();
   e.preventDefault();
   searchInput = resultsSearch.value;
-  console.log(searchInput);
+  titleEl.textContent = "Risultati per " + '"' + searchInput + '"';
 
-  GET2("search", "multi", searchInput).then((data) => {
-    data.results.map((movie) => moviesResult.append(cardPopulator(movie)));
-    console.log(data.results);
+  moviesResult.append(serieTvTitle, serieTvEl, filmTitle, filmEl);
+
+  Promise.all([
+    GET3("search", "tv", searchInput),
+    GET3("search", "movie", searchInput),
+  ]).then((data) => {
+    data[0].results.map((movie) => serieTvEl.append(cardPopulator(movie)));
+    data[1].results.map((movie) => filmEl.append(cardPopulator(movie)));
   });
 });

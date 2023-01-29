@@ -24,3 +24,9 @@ export const cardPopulator = (data) => {
   cardEl.appendChild(imgEl);
   return cardEl;
 };
+
+export const cardDelete = () => {
+  const cardEl = qsA(".movie");
+
+  cardEl.forEach((movie) => movie.remove());
+};

@@ -19,11 +19,12 @@ nav {
   border-radius: 0 0 5px 5px;
   height: 50px;
   width: 100%;
-  padding: 0 10px;
+  /* padding: 0 10px; */
   color: #e92525;
   font-size: large;
   top: 0;
   left: 0;
+  right: 0;
 }
 
 .logo {
@@ -44,15 +45,18 @@ a:hover {
 }
 
 .movies,
-.search-form {
+.search-form,
+.results {
   text-align: center;
-  margin: 70px 10px;
+  margin: 70px 10px 40px 10px;
 }
 
 .popular-movies,
 .top-rated-movies,
 .popular-tv,
-.top-rated-tv {
+.top-rated-tv,
+.tv,
+.film {
   display: flex;
   overflow-x: auto;
   gap: 10px;
@@ -87,16 +91,31 @@ a:hover {
 }
 
 /* SEARCH PAGE */
+.search-form {
+  display: flex;
+  gap: 20px;
+}
+
 .search-input,
 .btn-search {
   height: 20px;
   border-radius: 10px;
   border: none;
+  padding: 0 10px;
 }
 
+.btn-search {
+  cursor: pointer;
+}
+
+.btn-search:hover {
+  font-weight: bold;
+}
+
+.title,
 .results {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 0 10px;
+  margin: 10px 10px;
 }
