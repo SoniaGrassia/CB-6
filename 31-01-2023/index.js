@@ -26,6 +26,10 @@ let messaggio = `<!DOCTYPE html>
 <body>
 l'utente <b>${utente.username}</b> ha avviato l'app il giorno 
 <b>${data.getDate()}/${data.getMonth()}/${data.getFullYear()}</b> usando la piattaforma: ${piattaforma}
+<hr>
+<a href="prodotti">Prodotti</a>
+<hr>
+<a href="cliente">Cliente</a>
 </body>
 </head>
 </html>`;
