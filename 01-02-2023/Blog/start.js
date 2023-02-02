@@ -9,7 +9,7 @@
 -Devi gestire sia lo status code 200 che il 404
 -Usa text/plain per i tuoi contenuti di 3 diverse pagine: articoli, commenti, utenti
 -Usa 3 variabili per passare all'output i titoli delle pagine (3 variabili per tre titoli)
--Formatta usando la modalità literal template. */
+-Formatta usando la modalità literal template */
 
 const http = require("http");
 const PORT = 3001;
