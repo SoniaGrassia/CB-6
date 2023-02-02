@@ -1,0 +1,14 @@
+{
+  "name": "lista_libri",
+  "version": "1.0.0",
+  "description": "app per libri",
+  "main": "app-listaLibri.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sonia",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
