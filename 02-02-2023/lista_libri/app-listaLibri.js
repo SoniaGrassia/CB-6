@@ -2,6 +2,7 @@ const http = require("http");
 const fs = require("fs");
 const libri = require("./libri");
 
+//creo il server
 const server = http
   .createServer((req, res) => {
     if (req.url === "/") {
