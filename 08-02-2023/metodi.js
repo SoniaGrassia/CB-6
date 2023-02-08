@@ -43,6 +43,17 @@ app.post("/api", (req, res) => {
     .json({ success: true, articolo: { body: body, tags: tags } });
 });
 
+//POST -> per prendere i dati da un form (da creare)
+app.post("/login", (req, res) => {
+  const { name } = req.body;
+  if (name) {
+    return res.status(200).send(`Benvenuto/a ${name}`);
+  }
+  return res
+    .status(400)
+    .json({ success: false, msg: "Inserimento dati non riuscito" });
+});
+
 //PUT
 app.put("/api/:id", (req, res) => {
   const { id } = req.params;
