@@ -4,6 +4,9 @@ const hbs = require("hbs");
 const app = express();
 const PORT = 4000;
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 app.set("view engine", "hbs");
 hbs.registerPartials(__dirname + "/views/partials");
 app.use(express.static("public"));
@@ -32,10 +35,14 @@ app.get("/login", (req, res) => {
   res.render("login");
 });
 //Non sono riuscita ad interpolare l'immagine
-//Ho provato a fare la parte facoltativa ma non sono riuscita a continuare
-// app.post("/login", (req, res) => {
-//   res.render("login",);
-// });
+app.post("/login", (req, res) => {
+  const { name } = req.body;
+  if (name) {
+    return res.render("about", {
+      titolo: "About POST",
+    });
+  }
+});
 
 app.listen(PORT, () => {
   console.log(`Server attivo sulla porta ${PORT}`);
