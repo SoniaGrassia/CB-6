@@ -1,0 +1,24 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>{{titolo}}</title>
+  </head>
+  <body>
+    {{!-- interpolazione di porzioni di codice che ho creato a parte e
+    lo si capisce dal > prima del nome del file --}}
+    
+    {{> header}}
+  
+  {{!-- interpolazione di un dato variabile --}}
+    <h1>Benvenuta {{nome}}, sei nella {{titolo}} </h1>
+    <h2>Mi piacciono: i {{myPreferences.pet}}, il colore {{myPreferences.color}} e l'{{myPreferences.season}}  </h2>
+<a href="login">Login</a>
+<br>
+<br>
+<a href="about">About</a>
+    {{> footer}}
+  </body>
+</html>
