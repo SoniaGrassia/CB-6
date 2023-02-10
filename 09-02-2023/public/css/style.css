@@ -5,3 +5,8 @@ body {
 header {
   background-color: cadetblue;
 }
+
+img {
+  width: 150px;
+  height: 100px;
+}

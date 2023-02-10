@@ -34,7 +34,7 @@ app.get("/about", (req, res) => {
 app.get("/login", (req, res) => {
   res.render("login");
 });
-//Non sono riuscita ad interpolare l'immagine
+
 app.post("/login", (req, res) => {
   const { name } = req.body;
   if (name) {
