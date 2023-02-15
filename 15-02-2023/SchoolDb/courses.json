@@ -1,0 +1,103 @@
+[{
+  "_id": {
+    "$oid": "63ecf35c51e5aa79663dea1e"
+  },
+  "nome_corso": "scienze del testo per le professioni digitali",
+  "materia": "linguistica computazionale",
+  "docente": [
+    "Salvo Faro",
+    "Lorenzo Di Silvestro"
+  ],
+  "università": "Università degli studi di Catania"
+},{
+  "_id": {
+    "$oid": "63ecf35c51e5aa79663dea1f"
+  },
+  "nome_corso": "scienze del testo per le professioni digitali",
+  "materia": "epistemologia",
+  "docenti": "Marco Mazzone",
+  "università": "Università degli studi di Catania"
+},{
+  "_id": {
+    "$oid": "63ecf35c51e5aa79663dea20"
+  },
+  "nome_corso": "scienze del testo per le professioni digitali",
+  "materia": "metodi quantitativi per l'analisi dei dati testuali",
+  "docenti": "Antonio Di Silvestro",
+  "università": "Università degli studi di Catania"
+},{
+  "_id": {
+    "$oid": "63ecf35c51e5aa79663dea21"
+  },
+  "nome_corso": "scienze del testo per le professioni digitali",
+  "materia": "corpus linguistics",
+  "docente": "Marco Venuti",
+  "università": "Università degli studi di Catania"
+},{
+  "_id": {
+    "$oid": "63ecf35c51e5aa79663dea22"
+  },
+  "nome_corso": "scienze del testo per le professioni digitali",
+  "materia": "Vocabolari digitali",
+  "docente": "Antonio Sichera",
+  "università": "Università degli studi di Catania"
+},{
+  "_id": {
+    "$oid": "63ecf35c51e5aa79663dea23"
+  },
+  "nome_corso": "scienze del testo per le professioni digitali",
+  "materia": "Digital Marketing",
+  "docente": "Salvo Grasso",
+  "università": "Università degli studi di Catania"
+},{
+  "_id": {
+    "$oid": "63ecf35c51e5aa79663dea24"
+  },
+  "nome_corso": "scienze del testo per le professioni digitali",
+  "materia": "banche dati e trattamento digitale dei tesi",
+  "docente": "Salvatore Arcidiacono",
+  "università": "Università degli studi di Catania"
+},{
+  "_id": {
+    "$oid": "63ecf35c51e5aa79663dea25"
+  },
+  "nome_corso": "scienze del testo per le professioni digitali",
+  "materia": "storia ed epistemologia delle macchine",
+  "docente": "Luigi Ingalisi",
+  "università": "Università degli studi di Catania"
+},{
+  "_id": {
+    "$oid": "63ecf35c51e5aa79663dea26"
+  },
+  "nome_corso": "scienze del testo per le professioni digitali",
+  "materia": "basi di dati, ontologie e web semantico",
+  "docente": [
+    "Giuseppe Grasso",
+    "Marianna Nicolosi"
+  ],
+  "università": "Università degli studi di Catania"
+},{
+  "_id": {
+    "$oid": "63ecf35c51e5aa79663dea27"
+  },
+  "nome_corso": "scienze del testo per le professioni digitali",
+  "materia": "biblioteche digitali",
+  "docente": "Simona Inserra",
+  "università": "Università degli studi di Catania"
+},{
+  "_id": {
+    "$oid": "63ecf35c51e5aa79663dea28"
+  },
+  "nome_corso": "scienze del testo per le professioni digitali",
+  "materia": "informazione e big data",
+  "docente": "Salvatore Giuffrida",
+  "università": "Università degli studi di Catania"
+},{
+  "_id": {
+    "$oid": "63ecf35c51e5aa79663dea29"
+  },
+  "nome_corso": "scienze del testo per le professioni digitali",
+  "materia": "intelligenza artificiale",
+  "docente": "Daniela Giordano",
+  "università": "Università degli studi di Catania"
+}]

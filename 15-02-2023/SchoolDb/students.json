@@ -1,0 +1,155 @@
+[{
+  "_id": {
+    "$oid": "63ecefa2f5abbbe8918f9b44"
+  },
+  "nome": "Sonia",
+  "cognome": "Grassia",
+  "matricola": 123456,
+  "corsi": [
+    "linguistica computazionale",
+    "epistemologia",
+    "metodi quantitativi per l'analisi dei dati testuali",
+    "corpus linguistics",
+    "vocabolari digitali",
+    "digital marketing",
+    "banche dati e trattamenti digitale dei testi",
+    "storia ed epistemologia delle macchine",
+    "Basi di dati, ontologie e web semantico",
+    "biblioteche digitali",
+    "informazione e big data",
+    "intelligenza artificiale"
+  ],
+  "esami": [
+    "linguistica computazionale",
+    "epistemologia",
+    "metodi quantitativi per l'analisi dei dati testuali",
+    "corpus linguistics",
+    "vocabolari digitali",
+    "digital marketing",
+    "banche dati e trattamenti digitale dei testi",
+    "storia ed epistemologia delle macchine",
+    "Basi di dati, ontologie e web semantico",
+    "biblioteche digitali",
+    "informazione e big data",
+    "intelligenza artificiale"
+  ],
+  "status": "Studente Laureato"
+},{
+  "_id": {
+    "$oid": "63ecefa2f5abbbe8918f9b45"
+  },
+  "nome": "Dennis",
+  "cognome": "Castiglione",
+  "matricola": 7891011,
+  "corsi": [
+    "linguistica computazionale",
+    "epistemologia",
+    "metodi quantitativi per l'analisi dei dati testuali",
+    "corpus linguistics",
+    "vocabolari digitali",
+    "digital marketing",
+    "banche dati e trattamenti digitale dei testi",
+    "storia ed epistemologia delle macchine",
+    "Basi di dati, ontologie e web semantico",
+    "biblioteche digitali",
+    "informazione e big data",
+    "intelligenza artificiale"
+  ],
+  "esami": [
+    "linguistica computazionale",
+    "epistemologia",
+    "metodi quantitativi per l'analisi dei dati testuali",
+    "corpus linguistics",
+    "biblioteche digitali"
+  ]
+},{
+  "_id": {
+    "$oid": "63ecefa2f5abbbe8918f9b46"
+  },
+  "nome": "Valentina",
+  "cognome": "Urzì",
+  "matricola": 7565467,
+  "corsi": [
+    "linguistica computazionale",
+    "epistemologia",
+    "metodi quantitativi per l'analisi dei dati testuali",
+    "corpus linguistics",
+    "vocabolari digitali",
+    "digital marketing",
+    "banche dati e trattamenti digitale dei testi",
+    "storia ed epistemologia delle macchine",
+    "Basi di dati, ontologie e web semantico",
+    "biblioteche digitali",
+    "informazione e big data",
+    "intelligenza artificiale"
+  ],
+  "esami": [
+    "digital marketing",
+    "banche dati e trattamenti digitale dei testi",
+    "storia ed epistemologia delle macchine",
+    "Basi di dati, ontologie e web semantico",
+    "biblioteche digitali",
+    "informazione e big data",
+    "intelligenza artificiale"
+  ]
+},{
+  "_id": {
+    "$oid": "63ecefa2f5abbbe8918f9b47"
+  },
+  "nome": "Greta",
+  "cognome": "Tomasoni",
+  "matricola": 98997960,
+  "corsi": [
+    "linguistica computazionale",
+    "epistemologia",
+    "metodi quantitativi per l'analisi dei dati testuali",
+    "corpus linguistics",
+    "vocabolari digitali",
+    "digital marketing",
+    "banche dati e trattamenti digitale dei testi",
+    "storia ed epistemologia delle macchine",
+    "Basi di dati, ontologie e web semantico",
+    "biblioteche digitali",
+    "informazione e big data",
+    "intelligenza artificiale"
+  ],
+  "esami": [
+    "linguistica computazionale",
+    "metodi quantitativi per l'analisi dei dati testuali",
+    "vocabolari digitali",
+    "banche dati e trattamenti digitale dei testi",
+    "Basi di dati, ontologie e web semantico",
+    "informazione e big data"
+  ]
+},{
+  "_id": {
+    "$oid": "63ecefa2f5abbbe8918f9b48"
+  },
+  "nome": "Ettore",
+  "cognome": "Sanfilippo",
+  "matricola": {
+    "$numberLong": "7566458833"
+  },
+  "corsi": [
+    "linguistica computazionale",
+    "epistemologia",
+    "metodi quantitativi per l'analisi dei dati testuali",
+    "corpus linguistics",
+    "vocabolari digitali",
+    "digital marketing",
+    "banche dati e trattamenti digitale dei testi",
+    "storia ed epistemologia delle macchine",
+    "Basi di dati, ontologie e web semantico",
+    "biblioteche digitali",
+    "informazione e big data",
+    "intelligenza artificiale"
+  ],
+  "esami": [
+    "epistemologia",
+    "metodi quantitativi per l'analisi dei dati testuali",
+    "vocabolari digitali",
+    "banche dati e trattamenti digitale dei testi",
+    "Basi di dati, ontologie e web semantico",
+    "informazione e big data"
+  ]
+}]
