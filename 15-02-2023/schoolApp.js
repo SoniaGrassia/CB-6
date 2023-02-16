@@ -2,7 +2,7 @@ const { MongoClient } = require("mongodb");
 
 // connetto l'url
 const url =
-  "mongodb+srv://sonia:24021994@cluster0.x2d1llm.mongodb.net/esercizio?retryWrites=true&w=majority";
+  "mongodb+srv://sonia:0000@cluster0.x2d1llm.mongodb.net/esercizio?retryWrites=true&w=majority";
 const client = new MongoClient(url);
 
 // database
