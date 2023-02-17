@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esercizi 18-01-2023</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./scriptForm.js" type="module"></script>
+  </head>
+  <body class="form-body">
+    <form id="formContainer">
+      <div>
+        <label for="title">Nome Prodotto</label>
+        <input
+          type="text"
+          id="title"
+          placeholder="Inserisci il nome del prodotto"
+        />
+      </div>
+      <div>
+        <label for="price">Inserisci il prezzo</label>
+        <input type="number" id="price" placeholder="Prezzo" />
+      </div>
+      <div>
+        <label for="category">Inserisci una categoria</label>
+        <input type="number" id="category" placeholder="Categoria" />
+      </div>
+      <div>
+        <label for="image">Carica un'mmagine</label>
+        <input type="text" id="image" placeholder="Aggiungi un'immagine" />
+      </div>
+      <div>
+        <label for="description">Descrivi il tuo prodotto</label>
+        <textarea
+          id="description"
+          placeholder="Aggiungi una descrizione"
+          rows="5"
+          cols="40"
+        ></textarea>
+      </div>
+      <input class="button" type="submit" value="INVIA" />
+    </form>
+  </body>
+</html>
