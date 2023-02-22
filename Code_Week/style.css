@@ -258,3 +258,11 @@ h1 {
   font-size: large;
   margin-bottom: 30px;
 }
+
+.modal-error {
+  display: none;
+}
+
+.enabled {
+  display: block;
+}
