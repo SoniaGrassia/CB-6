@@ -12,7 +12,7 @@ const best00 = qS(".best00");
 const modalEl = qS(".modal");
 const modalOverlay = qS(".overlay");
 
-Promise.all([
+export const promiseGet = Promise.all([
   GET1("1970", "2009"),
   GET1("1970", "1979"),
   GET1("1980", "1989"),
@@ -39,6 +39,7 @@ Promise.all([
     );
   });
 
+//Chiudere la modale
 modalOverlay.addEventListener("click", () => {
   const modalSerieEl = qS(".serie-modal");
 
