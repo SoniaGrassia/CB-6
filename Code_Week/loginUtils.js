@@ -14,8 +14,6 @@ const best80 = qS(".best80-auth");
 const best90 = qS(".best90-auth");
 const best00 = qS(".best00-auth");
 
-const modalContainer = qS(".serie-modal");
-
 const myLogin = {
   username: "sonia",
   password: "1111",
@@ -62,10 +60,8 @@ export const modalGenLogin = (data) => {
   const titleEl = cE("h2");
   const overviewEl = cE("p");
   const releaseDateEl = cE("p");
-
   const voteAverageEl = cE("p");
   const starEl = cE("div");
-
   const btnAdd = cE("button");
 
   modalEl.className = "serie-modal";
@@ -82,6 +78,7 @@ export const modalGenLogin = (data) => {
   starEl.className = "Stars";
   starEl.setAttribute("style", `--rating: ${data.vote_average}`);
   btnAdd.textContent = "+ MyList";
+  btnAdd.className = "add-btn";
 
   wrapperTextEl.append(
     titleEl,
@@ -94,7 +91,17 @@ export const modalGenLogin = (data) => {
   modalEl.append(imgEl, wrapperTextEl);
 
   btnAdd.addEventListener("click", () => {
-    myList.append(cardPopulator(serie));
+    const serieAdd = cE("div");
+    const imgEl = cE("img");
+    serieAdd.setAttribute("id", data.id);
+    serieAdd.className = "serie";
+    imgEl.setAttribute(
+      "src",
+      `https://image.tmdb.org/t/p/w500/${data.poster_path}`
+    );
+
+    serieAdd.append(imgEl);
+    myList.append(serieAdd);
   });
 
   return modalEl;
