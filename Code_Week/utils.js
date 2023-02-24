@@ -61,5 +61,3 @@ export const modalGen = (data) => {
   modalEl.append(imgEl, wrapperTextEl);
   return modalEl;
 };
-
-// devo creare cardDelete

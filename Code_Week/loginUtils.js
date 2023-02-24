@@ -1,6 +1,5 @@
 import { qS, cE, qsA, cardPopulator } from "./utils.js";
 import { promiseGet } from "./loginScript.js";
-import { GET2 } from "./api.js";
 
 const userName = qS("input[name='username']");
 const userPassword = qS("input[name='password']");

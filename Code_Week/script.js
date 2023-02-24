@@ -2,7 +2,6 @@ import { GET1, GET2 } from "./api.js";
 
 import { qS, qsA, cardPopulator, modalGen } from "./utils.js";
 
-// const heroImg = qS(".hero-series");
 const bestSeries = qS(".best-series");
 const best70 = qS(".best70");
 const best80 = qS(".best80");
@@ -39,7 +38,7 @@ export const promiseGet = Promise.all([
     );
   });
 
-//Chiudere la modale
+//Chiude la modale
 modalOverlay.addEventListener("click", () => {
   const modalSerieEl = qS(".serie-modal");
 
