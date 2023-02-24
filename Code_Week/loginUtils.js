@@ -1,5 +1,6 @@
 import { qS, cE, qsA, cardPopulator } from "./utils.js";
 import { promiseGet } from "./loginScript.js";
+import { GET2 } from "./api.js";
 
 const userName = qS("input[name='username']");
 const userPassword = qS("input[name='password']");
@@ -13,6 +14,16 @@ const best70 = qS(".best70-auth");
 const best80 = qS(".best80-auth");
 const best90 = qS(".best90-auth");
 const best00 = qS(".best00-auth");
+
+const list = [];
+
+const listPopulator = (data) => {
+  const newObj = {
+    id: data.id,
+    class: "serie",
+    img: data.poster_path,
+  };
+};
 
 const myLogin = {
   username: "sonia",
@@ -100,9 +111,11 @@ export const modalGenLogin = (data) => {
       `https://image.tmdb.org/t/p/w500/${data.poster_path}`
     );
 
+    listPopulator(data);
+    list.push(data);
+    console.log(list);
     serieAdd.append(imgEl);
     myList.append(serieAdd);
   });
-
   return modalEl;
 };

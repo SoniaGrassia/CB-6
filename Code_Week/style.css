@@ -133,7 +133,7 @@ h1 {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #69037b;
+  background-color: #69037b5b;
   border-radius: 8px;
   border: 5px inset #000000bb;
 }
