@@ -1,5 +1,5 @@
 .WelcomeDiv {
-  box-shadow: 0 0 30px 4px black;
+  box-shadow: 0 0 30px 5px black;
   margin: 20px;
   height: 350px;
 }
@@ -9,6 +9,7 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
+  opacity: 0.5;
 }
 
 .welcome-title,
@@ -26,5 +27,6 @@
 
 .description {
   top: 60%;
-  padding: 30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
