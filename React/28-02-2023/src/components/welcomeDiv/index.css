@@ -12,6 +12,16 @@
   opacity: 0.5;
 }
 
+.text {
+  border: 1px solid red;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 350px;
+}
+
 .welcome-title,
 .description {
   position: absolute;
@@ -20,7 +30,7 @@
 }
 
 .welcome-title {
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -29,4 +39,5 @@
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
 }

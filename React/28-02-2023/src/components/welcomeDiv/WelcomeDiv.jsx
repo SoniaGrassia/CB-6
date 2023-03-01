@@ -8,11 +8,13 @@ const WelcomeDiv = ({ title, alt }) => {
         src="https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg"
         alt={alt}
       />
-      <h2 className="welcome-title">{title}</h2>
-      <p className="description">
-        Qui potrai trovare tutti i link utili per la creazione di un'app con
-        React
-      </p>
+      <div className="text">
+        <h2 className="welcome-title">{title}</h2>
+        <p className="description">
+          Qui potrai trovare tutti i link utili per la creazione di un'app con
+          React
+        </p>
+      </div>
     </div>
   );
 };
