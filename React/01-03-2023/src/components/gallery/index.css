@@ -6,11 +6,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
 .Gallery img {
   height: 200px;
-  width: 400;
+  width: 200px;
   object-fit: cover;
 }
 
@@ -20,7 +21,6 @@
   border-radius: 100px;
   border: 2px solid rgba(0, 0, 0, 0.403);
   background-color: yellow;
-  margin: 10px;
   cursor: pointer;
 }
 
