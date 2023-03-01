@@ -1,0 +1,29 @@
+.Gallery h2 {
+  margin-bottom: 5px;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Gallery img {
+  height: 200px;
+  width: 400;
+  object-fit: cover;
+}
+
+.Gallery button {
+  height: 20px;
+  width: 20px;
+  border-radius: 100px;
+  border: 2px solid rgba(0, 0, 0, 0.403);
+  background-color: yellow;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.Gallery button:hover {
+  transform: scale(1.3);
+}
