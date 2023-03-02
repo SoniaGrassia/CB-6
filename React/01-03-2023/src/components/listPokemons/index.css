@@ -1,3 +1,12 @@
+.containerList hr {
+  margin-top: 20px;
+  width: 200px;
+}
+
+.containerList h2 {
+  /* margin-bottom: 0; */
+}
+
 .ListPokemon {
   display: flex;
   justify-content: center;

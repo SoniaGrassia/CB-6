@@ -14,8 +14,8 @@ const CardPokemon = ({ pokemonData }) => {
         <h2 className="name">
           {pokemonData.name.charAt(0).toUpperCase() + pokemonData.name.slice(1)}
         </h2>
-        <p className="ability">Ability:{pokemonData.ability[0]}</p>
-        <p className="type">Type: {pokemonData.type[0]}</p>
+        <p className="ability">Ability: {pokemonData.ability.toString()}</p>
+        <p className="type">Type: {pokemonData.type.toString()}</p>
       </div>
       <Button text="Seleziona" name={pokemonData.name} />
     </div>

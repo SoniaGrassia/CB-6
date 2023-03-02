@@ -3,10 +3,14 @@ import "./index.css";
 
 const ListPokemon = ({ listData }) => {
   return (
-    <div className="ListPokemon">
-      {listData.map((pokemon) => (
-        <CardPokemon pokemonData={pokemon} key={pokemon.name} />
-      ))}
+    <div className="containerList">
+      <hr />
+      <h2>Lista dei Pokemon</h2>
+      <div className="ListPokemon">
+        {listData.map((pokemon) => (
+          <CardPokemon pokemonData={pokemon} key={pokemon.name} />
+        ))}
+      </div>
     </div>
   );
 };
