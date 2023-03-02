@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import "./index.css";
 
 const Gallery = () => {
@@ -6,15 +8,26 @@ const Gallery = () => {
     "https://fcjohndoe.com/wp-content/uploads/pokemon-leggendari.avif",
   ];
 
+  const [displayedImage, setDisplayedImage] = useState(0);
+
+  const previousImage = () => {
+    setDisplayedImage(
+      (displayedImage - 1 + listPhotoGallery.length) % listPhotoGallery.length
+    );
+  };
+
+  const nextImage = () => {
+    setDisplayedImage((displayedImage + 1) % listPhotoGallery.length);
+  };
 
   return (
     <div className="Gallery">
       <h2>Gallery</h2>
       <div className="carousel">
-        <button></button>
-        <img src={listPhotoGallery[0]} alt="" />
-        <img src={listPhotoGallery[1]} alt="" />
-        <button></button>
+        <button onClick={previousImage}>{"<"}</button>
+        <img src={listPhotoGallery[displayedImage]} alt="" />
+        {/* <img src={listPhotoGallery[1]} alt="" /> */}
+        <button onClick={nextImage}>{">"}</button>
       </div>
     </div>
   );
