@@ -1,0 +1,17 @@
+.Modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.799);
+}
+
+.Modal__content {
+  width: 70%;
+  height: 50%;
+  background-color: white;
+  margin: auto;
+}

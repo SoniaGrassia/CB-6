@@ -1,21 +1,35 @@
+import { useState, useEffect } from "react";
 import Button from "../button";
 import "./index.css";
 
 const CardPokemon = ({ pokemonData }) => {
+  const [infoPokemon, setInfoPokemon] = useState({
+    sprites: { other: { dream_world: {} } },
+    name: "",
+    abilities: [{ ability: {} }],
+    types: [{ type: {} }],
+  });
+
+  useEffect(() => {
+    fetch(pokemonData.url)
+      .then((res) => res.json())
+      .then((data) => setInfoPokemon(data));
+  }, [pokemonData.url]);
+
   return (
     <div className="CardPokemon">
       <img
         className="imgPokemon"
-        src={pokemonData.image}
+        src={infoPokemon.sprites.other.dream_world.front_default}
         alt={pokemonData.name}
       />
       <hr />
       <div className="description">
-        <h2 className="name">
-          {pokemonData.name.charAt(0).toUpperCase() + pokemonData.name.slice(1)}
-        </h2>
-        <p className="ability">Ability: {pokemonData.ability.toString()}</p>
-        <p className="type">Type: {pokemonData.type.toString()}</p>
+        <h2 className="name">{infoPokemon.name.toUpperCase()}</h2>
+        <p className="ability">
+          Ability: {infoPokemon.abilities[0].ability.name}
+        </p>
+        <p className="type">Type: {infoPokemon.types[0].type.name}</p>
       </div>
       <Button text="Seleziona" name={pokemonData.name} />
     </div>
