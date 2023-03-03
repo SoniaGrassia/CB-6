@@ -17,6 +17,16 @@
   cursor: pointer;
 }
 
+.btn:hover {
+  transform: rotate(20deg);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+}
+
 .dark-mode {
   background-color: #252525;
   color: whitesmoke;
