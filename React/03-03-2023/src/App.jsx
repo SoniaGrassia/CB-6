@@ -1,4 +1,3 @@
-import { pokemonList } from "./mock/pokemonList";
 import ListPokemon from "./components/listPokemons";
 import { useState } from "react";
 import Hero from "./components/hero";
@@ -21,7 +20,7 @@ const App = () => {
         />
       </button>
       <Gallery />
-      <ListPokemon listData={pokemonList} setPokemonModal={setPokemonModal} />
+      <ListPokemon setPokemonModal={setPokemonModal} />
       {pokemonModal ? <Modal setPokemonModal={setPokemonModal} /> : null}
     </div>
   );
