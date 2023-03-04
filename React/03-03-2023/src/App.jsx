@@ -8,6 +8,7 @@ import "./App.css";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
+  const [pokemonModal, setPokemonModal] = useState(null);
 
   return (
     <div className={`App ${darkMode && "dark-mode"}`}>
@@ -20,8 +21,8 @@ const App = () => {
         />
       </button>
       <Gallery />
-      <ListPokemon listData={pokemonList} />
-      <Modal />
+      <ListPokemon listData={pokemonList} setPokemonModal={setPokemonModal} />
+      {pokemonModal ? <Modal setPokemonModal={setPokemonModal} /> : null}
     </div>
   );
 };

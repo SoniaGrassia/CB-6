@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import CardPokemon from "../cardPokemon";
 import "./index.css";
 
-const ListPokemon = () => {
+const ListPokemon = ({ setPokemonModal }) => {
   const [listPokemon, setListPokemon] = useState([]);
 
   useEffect(() => {
@@ -19,7 +19,11 @@ const ListPokemon = () => {
       <h2>Lista dei Pokemon</h2>
       <div className="ListPokemon">
         {listPokemon.map((pokemon) => (
-          <CardPokemon pokemonData={pokemon} key={pokemon.url} />
+          <CardPokemon
+            pokemonData={pokemon}
+            key={pokemon.url}
+            setPokemonModal={setPokemonModal}
+          />
         ))}
       </div>
     </div>

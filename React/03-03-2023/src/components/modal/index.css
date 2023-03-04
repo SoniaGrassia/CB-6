@@ -1,17 +1,27 @@
 .Modal {
-  /* position: fixed; */
+  position: fixed;
   display: flex;
   justify-content: center;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  /* background-color: rgba(0, 0, 0, 0.799); */
+}
+
+.Modal__overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.799);
+  width: 100vw;
+  height: 100vh;
 }
 
 .Modal__content {
+  position: relative;
   width: 70%;
   height: 50%;
-  background-color: white;
   margin: auto;
+  background-color: white;
+  border: 1px solid yellow;
+  border-radius: 10px;
+  box-shadow: 0 0 50px 5px yellow;
 }

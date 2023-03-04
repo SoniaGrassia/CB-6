@@ -1,13 +1,12 @@
 import "./index.css";
 
-const Button = ({ text, name }) => {
+const Button = ({ setPokemonModal }) => {
   const onBtnClick = () => {
-    alert(`Hai selezionato ${name}`);
+    setPokemonModal((prev) => !prev);
   };
-
   return (
     <button className="button" onClick={onBtnClick}>
-      {text}
+      Seleziona
     </button>
   );
 };
