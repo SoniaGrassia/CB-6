@@ -1,10 +1,19 @@
 .TodoItem {
+  background-color: aliceblue;
   border: 1px solid rgb(172, 218, 247);
   box-shadow: inset 0 0 16px rgb(172, 218, 247);
   border-radius: 8px;
-  padding: 2px;
-  height: 150px;
-  width: 1005;
+  color: #12566f;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 8px;
+  width: 60%;
+}
+
+.TodoItem__title,
+.TodoItem__status {
+  margin: 0;
 }
 
 .TodoItem__status {

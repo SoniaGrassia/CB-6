@@ -1,19 +1,29 @@
-import { useState } from "react";
 import "./index.css";
 
-const TodoItem = ({ todoData }) => {
-  const { todo, completed } = todoData;
-  const [todoStatus, setTodoStatus] = useState(completed);
-
+const TodoItem = ({ item, setTodoData }) => {
   const onStatusClick = () => {
-    setTodoStatus((prev) => !prev);
+    setTodoData((prev) => [
+      ...prev.filter((todo) => todo.id !== item.id),
+      {
+        id: item.id,
+        todo: item.todo,
+        completed: !item.completed,
+      },
+    ]);
+    // console.log(item);
+  };
+
+  //prende l'id del todo cliccato come argomento e lo usa per filtrare l'array
+  const deleteTodo = (id) => {
+    setTodoData((prev) => prev.filter((todo) => todo.id !== id));
   };
 
   return (
     <div className="TodoItem">
-      <h3 className="TodoItem__title">{todo}</h3>
+      <input type="button" value="-" onClick={() => deleteTodo(item.id)} />
+      <h3 className="TodoItem__title">{item.todo}</h3>
       <p className="TodoItem__status" onClick={onStatusClick}>
-        Stato: {todoStatus ? "✔️" : "❌"}
+        Stato: {item.completed ? "✔️" : "❌"}
       </p>
     </div>
   );

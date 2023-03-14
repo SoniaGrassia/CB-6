@@ -1,0 +1,33 @@
+.ControlledComponent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ControlledComponent__todo {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  border-color: rgba(0, 0, 255, 0);
+  color: #12566f;
+  font-weight: bold;
+  outline: none;
+  height: 20px;
+  padding: 4px;
+}
+
+.ControlledComponent__btn {
+  background-color: transparent;
+  color: aliceblue;
+  border-radius: 100%;
+  border: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  font-size: 1rem;
+}
+
+.ControlledComponent__btn:hover {
+  background-color: aliceblue;
+  color: #12566f;
+}
