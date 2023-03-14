@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { IoIosAddCircleOutline } from "react-icons/io";
 import "./index.css";
 
 const ControlledComponent = ({ setTodoData }) => {
@@ -40,12 +41,13 @@ const ControlledComponent = ({ setTodoData }) => {
         type="text"
         placeholder="Todo..."
       />
-
-      <input
-        type="submit"
-        className="ControlledComponent__btn"
-        value="+"
-      ></input>
+      <div className="ControlledComponent__add-input">
+        <input
+          type="submit"
+          value="+"
+          className="ControlledComponent__btn"
+        ></input>
+      </div>
     </form>
   );
 };

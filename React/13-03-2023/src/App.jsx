@@ -14,6 +14,7 @@ function App() {
 
   return (
     <div className="App">
+      <h2 className="App__title">My TodoList</h2>
       <ControlledComponent setTodoData={setTodos} />
       <TodoList todoData={todos} setTodoData={setTodos} />
     </div>

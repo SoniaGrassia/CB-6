@@ -1,4 +1,5 @@
 import "./index.css";
+import { TiDelete } from "react-icons/ti";
 
 const TodoItem = ({ item, setTodoData }) => {
   const onStatusClick = () => {
@@ -20,7 +21,12 @@ const TodoItem = ({ item, setTodoData }) => {
 
   return (
     <div className="TodoItem">
-      <input type="button" value="-" onClick={() => deleteTodo(item.id)} />
+      <div className="TodoItem__btn-container">
+        <TiDelete
+          className="TodoItem__btn"
+          onClick={() => deleteTodo(item.id)}
+        />
+      </div>
       <h3 className="TodoItem__title">{item.todo}</h3>
       <p className="TodoItem__status" onClick={onStatusClick}>
         Stato: {item.completed ? "✔️" : "❌"}
