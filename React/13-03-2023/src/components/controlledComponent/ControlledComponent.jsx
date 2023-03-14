@@ -30,6 +30,7 @@ const ControlledComponent = ({ setTodoData }) => {
         return prev;
       }
     });
+    setTodoInput("");
   };
 
   return (
