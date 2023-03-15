@@ -1,0 +1,10 @@
+.ListMiniCard {
+  display: flex;
+  gap: 10px;
+  height: 120px;
+  padding: 8px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
