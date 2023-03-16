@@ -1,0 +1,11 @@
+.ModalCart {
+  position: fixed;
+  background-color: white;
+  border-radius: 5px;
+  width: 200px;
+  height: 300px;
+  top: 50px;
+  padding: 6px;
+  right: 5px;
+  z-index: 1;
+}

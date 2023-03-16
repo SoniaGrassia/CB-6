@@ -1,7 +1,13 @@
 import { shortDescription } from "../../utils/func";
 import "./index.css";
+import { BsCartPlus } from "react-icons/bs";
 
-const Card = ({ productData }) => {
+const Card = ({ productData, setModalContent }) => {
+  const onHandleAdd = () => {
+    setModalContent({ productData: productData });
+    console.log(productData);
+  };
+
   return (
     <div className="Card">
       <img
@@ -16,6 +22,7 @@ const Card = ({ productData }) => {
         </p>
         <p className="Card__text--cat">{productData.category}</p>
         <p className="Card__text--price">$ {productData.price}</p>
+        <BsCartPlus className="Card__cart-icon" onClick={onHandleAdd} />
       </div>
     </div>
   );

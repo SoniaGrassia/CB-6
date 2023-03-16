@@ -1,12 +1,16 @@
 import "./index.css";
+import { BsCart3 } from "react-icons/bs";
 
-const Navbar = ({ inputValue, setInputValue }) => {
+const Navbar = ({ inputValue, setInputValue, setIsVisible }) => {
   const onHandleInput = (e) => setInputValue(() => e.target.value);
 
   const onHandleSubmit = (e) => {
     e.preventDefault();
-    // console.log(inputValue);
-    // TODO: trasmettere inputValue nella GET di ListMiniCard per usarlo come /endpoint
+    setInputValue(() => inputValue);
+  };
+
+  const onHendleCartClick = () => {
+    setIsVisible((prev) => !prev);
   };
 
   return (
@@ -25,6 +29,7 @@ const Navbar = ({ inputValue, setInputValue }) => {
           required
         />
       </form>
+      <BsCart3 className="Navbar__cart" onClick={onHendleCartClick} />
     </div>
   );
 };

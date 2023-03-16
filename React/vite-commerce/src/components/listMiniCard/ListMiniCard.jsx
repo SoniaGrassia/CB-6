@@ -5,19 +5,14 @@ import "./index.css";
 
 const ListMiniCard = ({ inputValue }) => {
   const [miniCards, setMiniCards] = useState([]);
-  const [category, setCategory] = useState("fragrances");
 
   useEffect(() => {
-    GET(`/products/category/${category}`).then((data) =>
-      setMiniCards(() => data.products)
+    GET(inputValue ? `/products/category/${inputValue}` : "/products").then(
+      (data) => setMiniCards(() => data.products)
     );
     // console.log(inputValue);
-  }, []);
+  }, [inputValue]);
 
-  // useEffect(() => {
-  //   setCategory(inputValue);
-  // }, [inputValue]);
-  // console.log(miniCards);
   return (
     <div className="ListMiniCard">
       {miniCards.map((card) => (
