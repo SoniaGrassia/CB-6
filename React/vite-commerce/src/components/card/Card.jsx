@@ -2,10 +2,19 @@ import { shortDescription } from "../../utils/func";
 import "./index.css";
 import { BsCartPlus } from "react-icons/bs";
 
-const Card = ({ productData, setModalContent }) => {
+const Card = ({ productData, setModalContent, setCartList }) => {
   const onHandleAdd = () => {
-    setModalContent({ productData: productData });
-    console.log(productData);
+    setModalContent({
+      productData: productData,
+    });
+
+    const localStorageItem = JSON.parse(localStorage.getItem("cartList")) || [];
+
+    setCartList((prev) => [...prev, productData]);
+    localStorage.setItem(
+      "cartList",
+      JSON.stringify([...localStorageItem, productData])
+    );
   };
 
   return (

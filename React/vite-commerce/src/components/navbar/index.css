@@ -44,17 +44,20 @@
 }
 
 .Navbar__cart {
+  background-color: white;
   border-radius: 20%;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.641);
   color: #ff4e00;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
   position: absolute;
+  width: 25px;
+  height: 25px;
   right: 10px;
   top: 20px;
-  width: 20px;
-  height: 20px;
-  background-color: white;
-  padding: 4px;
-  cursor: pointer;
 }
 
 .Navbar__cart:hover {

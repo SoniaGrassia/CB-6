@@ -4,7 +4,7 @@ import Card from "../card/Card";
 import SpinnerLoading from "../spinnerLoading/SpinnerLoading";
 import "./index.css";
 
-const CardList = ({ title, endpoint, setModalContent }) => {
+const CardList = ({ title, endpoint, setModalContent, setCartList }) => {
   const [productsList, setProductsList] = useState([]);
 
   useEffect(() => {
@@ -21,6 +21,7 @@ const CardList = ({ title, endpoint, setModalContent }) => {
               productData={product}
               key={product.id}
               setModalContent={setModalContent}
+              setCartList={setCartList}
             />
           ))
         ) : (
