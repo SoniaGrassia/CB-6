@@ -12,11 +12,11 @@ const Modal = () => {
 
   const onHandleClick = (e) => {
     e.preventDefault();
+    dispatch({ type: "MODAL_IS_VISIBLE" });
   };
 
   const onHanldeClose = () => {
     dispatch({ type: "MODAL_IS_VISIBLE" });
-    console.log(state);
   };
   return (
     <div className={styles.Modal}>
