@@ -1,11 +1,10 @@
-import { useState, useReducer } from "react";
-import { initialState } from "../../store/state";
-import { mainReducer } from "../../store/reducers";
+import { useState, useContext } from "react";
+import { Context } from "../../store";
 import styles from "./index.module.scss";
 
 const Modal = () => {
   const [todo, setTodo] = useState("");
-  const [state, dispatch] = useReducer(mainReducer, initialState);
+  const { state, dispatch } = useContext(Context);
 
   const onHandleTodo = (e) => {
     setTodo(e.target.value);
