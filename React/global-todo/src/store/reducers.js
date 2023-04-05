@@ -15,6 +15,38 @@ export const mainReducer = (state, action) => {
         ...state,
         isModalVisible: !state.isModalVisible,
       };
+    case "SET_TEMP_TODO":
+      return {
+        ...state,
+        temporaryTodo: {
+          ...state.temporaryTodo,
+          todo: action.payload,
+        },
+      };
+    case "SET_TEMP_USERNAME":
+      return {
+        ...state,
+        temporaryTodo: {
+          ...state.temporaryTodo,
+          username: action.payload,
+        },
+      };
+    case "SET_TEMP_IMG":
+      return {
+        ...state,
+        temporaryTodo: {
+          ...state.temporaryTodo,
+          image: action.payload,
+        },
+      };
+    case "SET_TEMP_ID":
+      return {
+        ...state,
+        temporaryTodo: {
+          ...state.temporaryTodo,
+          id: action.payload,
+        },
+      };
   }
 };
 

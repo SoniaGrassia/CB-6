@@ -1,9 +1,3 @@
-# Esercizio 1
-
-Sulla base della lezione del giorno, completare il progetto della todo-list e aggiungere le logiche relative alla modale per aggiungere una nuova task. Gestire il valore `isModalVisible` da stato globale.
-
-# Avanzato
-
-Aggiungere alle logiche della modale la possibilità di aggiungere un ulteriore oggetto (todo) alla lista delle todos `tasksListData`.
-
-> (in locale, al reload si perderà ed è giusto così).
+//TODO:
+Avanzato 2
+Implementare infine le logiche relative alla modifica di una todo (la chiave completed per esempio) e quelle relative alla cancellazione della todo stessa.
