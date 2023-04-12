@@ -2,7 +2,7 @@ import Layout from "@/components/layout";
 import Head from "next/head";
 import Card from "@/components/card";
 import { getAllEvents } from "@/utils/events";
-import styles from "@/styles/Home.module.css";
+import styles from "@/styles/Home.module.scss";
 
 export default function Home({ eventData }) {
   return (
